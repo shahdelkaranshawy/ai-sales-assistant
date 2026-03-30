@@ -1,0 +1,116 @@
+# Sample PGQL-style patterns (Oracle Autonomous DB Property Graph)
+# Illustrative only — property names and labels should match your deployed graph DDL.
+# Canonical schema narrative: docs/knowledge-graph.md
+# Dynamic construction: src/query_builder.py
+
+# -----------------------------------------------------------------------------
+# Core entity navigation (customer / account)
+# Some designs use OWNS (Party→Account); samples below use HAS_ACCOUNT to match
+# src/example_build_customer_pgql.py — align labels with your property graph.
+# -----------------------------------------------------------------------------
+
+SELECT c.CUSTOMER_ID, c.CUSTOMER_NAME, a.ACCOUNT_ID, a.ARPU, a.MRC
+FROM MATCH (c:CUSTOMER)-[:HAS_ACCOUNT]->(a:ACCOUNT)
+WHERE c.CUSTOMER_ID = :customer_id
+ORDER BY a.ARPU DESC
+LIMIT 20
+
+# -----------------------------------------------------------------------------
+# Pipeline: customer → opportunities (MVP “action” context)
+# -----------------------------------------------------------------------------
+
+SELECT o.OPPORTUNITY_ID, o.DEAL_SIZE_AED, o.EXPECTED_CLOSE_DATE, o.OPPORTUNITY_STAGE
+FROM MATCH (c:CUSTOMER)-[:HAS_OPPORTUNITY]->(o:OPPORTUNITY)
+WHERE c.CUSTOMER_ID = :customer_id
+  AND o.OPPORTUNITY_STATUS = 'Open'
+ORDER BY o.EXPECTED_CLOSE_DATE ASC
+
+# -----------------------------------------------------------------------------
+# Risk overlay: account-level risk score (edge FOR_ACCOUNT in schema doc)
+# -----------------------------------------------------------------------------
+
+SELECT r.CHURN_SCORE_ACCOUNT, r.RISK_ACCOUNT, r.CREDIT_SCORE, r.RECOMMENDATION
+FROM MATCH (a:ACCOUNT)<-[:FOR_ACCOUNT]-(r:RISKSCORE)
+WHERE a.ACCOUNT_ID = :account_id
+
+# Party-level risk (FOR_CUSTOMER)
+SELECT r.CHURN_SCORE_PARTY, r.RISK_PARTY, r.FINAL_SEGMENT_PREDICTION
+FROM MATCH (c:CUSTOMER)<-[:FOR_CUSTOMER]-(r:RISKSCORE)
+WHERE c.CUSTOMER_ID = :customer_id
+
+# -----------------------------------------------------------------------------
+# Operational signals: open orders, interactions (renewal / support context)
+# -----------------------------------------------------------------------------
+
+SELECT ord.ORDER_ID, ord.ORDER_STATUS, ord.ORDER_CREATED_DATE, ord.PRODUCT_CATEGORY
+FROM MATCH (c:CUSTOMER)-[:HAS_OPEN_ORDER]->(ord:ORDER)
+WHERE c.CUSTOMER_ID = :customer_id
+
+SELECT i.INTERACTION_DATE, i.INTERACTION_STATUS, i.TYPE_OF_SUPPORT_TICKET
+FROM MATCH (a:ACCOUNT)-[:HAS_INTERACTION]->(i:INTERACTION)
+WHERE a.ACCOUNT_ID = :account_id
+ORDER BY i.INTERACTION_DATE DESC
+LIMIT 50
+
+# -----------------------------------------------------------------------------
+# Campaign context: campaign → activity → opportunity path
+# -----------------------------------------------------------------------------
+
+SELECT ca.CAMPAIGNACTIVITY_ID, ca.REJECTION_REASON, o.OPPORTUNITY_ID
+FROM MATCH (camp:CAMPAIGN)-[:HAS_ACTIVITY]->(ca:CAMPAIGNACTIVITY)
+     -[:HAS_OPPORTUNITY]->(o:OPPORTUNITY)
+WHERE camp.CAMPAIGN_ID = :campaign_id
+
+# Campaign targeting a party/customer
+SELECT camp.CAMPAIGN_ID, camp.CAMPAIGN_PRIORITY_SCORE
+FROM MATCH (camp:CAMPAIGN)-[:TARGETS_CUSTOMER]->(c:CUSTOMER)
+WHERE c.CUSTOMER_ID = :customer_id
+
+# -----------------------------------------------------------------------------
+# Sales coverage: manager → customer (MANAGES_CUSTOMER)
+# -----------------------------------------------------------------------------
+
+SELECT sm.SALES_MANAGER_NAME, sm.SALES_MANAGER_EMAIL, c.CUSTOMER_ID, c.CUSTOMER_NAME
+FROM MATCH (sm:SALES_MANAGER)-[:MANAGES_CUSTOMER]->(c:CUSTOMER)
+WHERE sm.SALES_MANAGER_ID = :sm_id
+
+# -----------------------------------------------------------------------------
+# AI recommendations queue (ASSIGNED_TO, FOR_OPPORTUNITY, USED_FOR)
+# -----------------------------------------------------------------------------
+
+SELECT rec.RECOMMENDATION_ID, rec.DESCRIPTION, rec.PRIORITY, rec.EXPECTED_IMPACT_AED,
+       rec.CONFIDENCE_SCORE, rec.STATUS
+FROM MATCH (sm:SALES_MANAGER)<-[:ASSIGNED_TO]-(rec:AI_RECOMMENDATION)
+WHERE sm.SALES_MANAGER_ID = :sm_id
+  AND rec.STATUS IN ('open', 'in-progress')
+ORDER BY rec.PRIORITY_SCORE DESC
+LIMIT 10
+
+SELECT rec.RECOMMENDATION_ID, o.OPPORTUNITY_ID, o.DEAL_SIZE_AED
+FROM MATCH (rec:AI_RECOMMENDATION)-[:FOR_OPPORTUNITY]->(o:OPPORTUNITY)
+WHERE rec.QUEUE_ID = :queue_id
+
+# -----------------------------------------------------------------------------
+# Aggregates / rollups (dashboards, “top N” style summaries)
+# -----------------------------------------------------------------------------
+
+SELECT a.ACCOUNT_ID, COUNT(o) AS open_opp_count, SUM(o.DEAL_SIZE_AED) AS pipeline_aed
+FROM MATCH (c:CUSTOMER)-[:HAS_ACCOUNT]->(a:ACCOUNT),
+           (c)-[:HAS_OPPORTUNITY]->(o:OPPORTUNITY)
+WHERE c.CUSTOMER_ID = :customer_id
+  AND o.OPPORTUNITY_STATUS = 'Open'
+GROUP BY a.ACCOUNT_ID
+
+SELECT o.OPPORTUNITY_STAGE, COUNT(*) AS cnt
+FROM MATCH (c:CUSTOMER)-[:HAS_OPPORTUNITY]->(o:OPPORTUNITY)
+WHERE c.CUSTOMER_ID = :customer_id
+GROUP BY o.OPPORTUNITY_STAGE
+
+# -----------------------------------------------------------------------------
+# Deal simulation → proposal (HAS_SIMULATION, CREATES_PROPOSAL, PROPOSED_FOR_*)
+# -----------------------------------------------------------------------------
+
+SELECT ds.SIMULATION_ID, p.PROPOSAL_ID, p.ACCOUNT_ID
+FROM MATCH (o:OPPORTUNITY)-[:HAS_SIMULATION]->(ds:DEAL_SIMULATION)
+     -[:CREATES_PROPOSAL]->(p:PROPOSAL)
+WHERE o.OPPORTUNITY_ID = :opportunity_id
