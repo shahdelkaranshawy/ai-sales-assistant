@@ -33,7 +33,7 @@ flowchart LR
   llm[LLM LangGraph workflows]
   sim[Deal simulator]
   react --> api
-  api --> graph
+  api --> graphDb
   api --> llm
   api --> sim
 ```
