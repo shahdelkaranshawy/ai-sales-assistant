@@ -29,7 +29,7 @@ Sales managers face **high volumes** of accounts and signals. It is hard to **pr
 flowchart LR
   react[React dashboard]
   api[FastAPI backend]
-  graph[Oracle Property Graph PGQL]
+  graphDb[Oracle Property Graph PGQL]
   llm[LLM LangGraph workflows]
   sim[Deal simulator]
   react --> api
