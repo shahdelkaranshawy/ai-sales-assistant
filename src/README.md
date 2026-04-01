@@ -29,5 +29,5 @@ python llm/json_response_parser_sample.py
 python llm/recommendation_prompt_builder_sample.py
 ```
 
-The production app adds FastAPI routers, real `GraphDBInterface`, SQLAlchemy repos, fifteen+ tools, and full-length domain prompts; see `docs/knowledge-graph.md` and architecture PDFs for the full design.
+The production app adds FastAPI routers, real `GraphDBInterface`, SQLAlchemy repos, fifteen+ tools, and full-length domain prompts; see `docs/knowledge-graph.md` and `architecture/KG_updated_v9.svg` for the full design.
 

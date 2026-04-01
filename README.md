@@ -4,7 +4,7 @@
 
 AI-powered **B2B sales assistant** concept: prioritize engagement, surface risk, and support decisions using a **property graph** for enterprise CRM-style data, **LLM reasoning** for recommendations and explanations, and **deal simulation** for what-if analysis.
 
-> This public repository is **documentation-first** (architecture PDFs, graph schema, PGQL examples, user guide) plus **`src/`** — small **runnable Python samples** (query builder, Pydantic deal models, LangChain `@tool` pattern, **LLM prompts & JSON parsing** under `src/llm/`). The full application lives in a private monorepo; no credentials or customer data are included here.
+> This public repository is **documentation-first** (knowledge-graph architecture diagram, graph schema, PGQL examples, user guide) plus **`src/`** — small **runnable Python samples** (query builder, Pydantic deal models, LangChain `@tool` pattern, **LLM prompts & JSON parsing** under `src/llm/`). The full application lives in a private monorepo; no credentials or customer data are included here.
 
 ## Problem
 
@@ -18,7 +18,7 @@ Sales managers face **high volumes** of accounts and signals. It is hard to **pr
 
 ## Key Features
 
-- AI-assisted **daily actions** and prioritization (see architecture PDFs).
+- AI-assisted **daily actions** and prioritization (see architecture diagram and `docs/knowledge-graph.md`).
 - **Explainable** rationale tied to graph-backed context where possible.
 - **Deal simulation** for scenario exploration.
 - **Feedback loops** to refine recommendations over time.
@@ -38,6 +38,10 @@ flowchart LR
   api --> sim
 ```
 
+### Knowledge graph schema (diagram)
+
+![Knowledge graph architecture](architecture/KG_updated_v9.svg)
+
 ## Tech Stack
 
 Python, LangGraph, LangChain, RAG patterns, Oracle Graph DB, FastAPI, React.
@@ -46,8 +50,7 @@ Python, LangGraph, LangChain, RAG patterns, Oracle Graph DB, FastAPI, React.
 
 | Path | Description |
 |------|-------------|
-| `architecture/graph-design.pdf` | Graph database design (e&). |
-| `architecture/ai-action-recommender.pdf` | AI / action recommender overview. |
+| `architecture/KG_updated_v9.svg` | Knowledge graph schema diagram (nodes and relationships). |
 | `docs/app-walkthrough.pdf` | Application walkthrough. |
 | `docs/knowledge-graph.md` | Node types, attributes, relationships (schema reference). |
 | `docs/user-manual.md` | User guide (Markdown). |
