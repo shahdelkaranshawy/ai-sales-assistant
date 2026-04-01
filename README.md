@@ -54,10 +54,6 @@ Python, LangGraph, LangChain, RAG patterns, Oracle Graph DB, FastAPI, React.
 | `sample_queries/sample-pgql-queries.txt` | Sample PGQL-style query patterns. |
 | `src/` | Runnable samples: PGQL `QueryBuilder`, deal **Pydantic** models, **LangChain** tools, **`src/llm/`** prompts & parsers (copilot, deal sim, **recommendation engine**) — [`src/README.md`](src/README.md). |
 
-## Results
-
-- **Design-level** artifact set suitable for MSc admissions: shows you can specify **real AI + graph** systems without leaking production implementation or data.
-
 ## License
 
 MIT License.
