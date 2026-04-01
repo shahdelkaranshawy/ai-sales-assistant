@@ -21,4 +21,4 @@ python3 json_response_parser_sample.py
 python3 recommendation_prompt_builder_sample.py
 ```
 
-Production recommendation code lives in `RecommendationGenerator` (`generator.py`): it adds full **expected_impact_aed / churn / NPS / win-probability** instruction tables, JSON-array retry prefixes, caching, and concurrency. See also `architecture/KG_updated_v9.svg` and `docs/knowledge-graph.md` for domain context.
+Production recommendation code lives in `RecommendationGenerator` (`generator.py`): it adds full **expected_impact_aed / churn / NPS / win-probability** instruction tables, JSON-array retry prefixes, caching, and concurrency. See also `architecture/knowledge-graph-schema.svg` and `docs/knowledge-graph.md` for domain context.

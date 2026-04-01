@@ -40,7 +40,7 @@ flowchart LR
 
 ### Knowledge graph schema (diagram)
 
-![Knowledge graph architecture](architecture/KG_updated_v9.svg)
+![Knowledge graph schema](architecture/knowledge-graph-schema.svg)
 
 ## Tech Stack
 
@@ -50,7 +50,7 @@ Python, LangGraph, LangChain, RAG patterns, Oracle Graph DB, FastAPI, React.
 
 | Path | Description |
 |------|-------------|
-| `architecture/KG_updated_v9.svg` | Knowledge graph schema diagram (nodes and relationships). |
+| `architecture/knowledge-graph-schema.svg` | Property graph schema diagram (nodes and relationships). |
 | `docs/app-walkthrough.pdf` | Application walkthrough. |
 | `docs/knowledge-graph.md` | Node types, attributes, relationships (schema reference). |
 | `docs/user-manual.md` | User guide (Markdown). |
