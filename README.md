@@ -66,6 +66,19 @@ flowchart TB
 
 ![Knowledge graph schema](architecture/knowledge-graph-schema.svg)
 
+## Product preview (optional)
+
+You do **not** need a full tab-by-tab gallery. The **Mermaid architecture** above, **schema SVG**, **`docs/user-manual.md`**, and **`docs/app-walkthrough.pdf`** already explain the product. For a quick visual on GitHub, **one or two redacted UI screenshots** are enough; add a **third** only if it shows a clearly different workflow (e.g. deal simulator vs. action list—not another similar list view).
+
+Suggested filenames if you add PNGs:
+
+| File | Use |
+|------|-----|
+| `docs/ui-dashboard.png` | Primary screen (e.g. morning brief / home). |
+| `docs/ui-workflow.png` | One other distinct area (e.g. actions, simulator, or proposals—pick the best single extra). |
+
+After the files exist, add a `## Demo` subsection here with `![…](docs/ui-dashboard.png)` (and optionally the second image). Skip duplicate or near-duplicate shots.
+
 ## Tech Stack
 
 Python, LangGraph, LangChain, RAG patterns, Oracle Graph DB, FastAPI, React.
@@ -75,6 +88,8 @@ Python, LangGraph, LangChain, RAG patterns, Oracle Graph DB, FastAPI, React.
 | Path | Description |
 |------|-------------|
 | `architecture/knowledge-graph-schema.svg` | Property graph schema diagram (nodes and relationships). |
+| `docs/ui-dashboard.png` | *(Optional)* Redacted UI — primary dashboard. |
+| `docs/ui-workflow.png` | *(Optional)* Redacted UI — second distinct workflow. |
 | `docs/app-walkthrough.pdf` | Application walkthrough. |
 | `docs/knowledge-graph.md` | Node types, attributes, relationships (schema reference). |
 | `docs/user-manual.md` | User guide (Markdown). |
