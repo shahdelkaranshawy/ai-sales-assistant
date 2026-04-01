@@ -21,9 +21,9 @@
 <ellipse fill="lightcoral" stroke="black" cx="637" cy="-801" rx="92.88" ry="18"/>
 <text text-anchor="middle" x="637" y="-797.3" font-family="Times,serif" font-size="14.00">CampaignActivity</text>
 </g>
-<!-- Campaign&#45;&gt;CampaignActivity -->
+<!-- Campaign->CampaignActivity -->
 <g id="edge1" class="edge">
-<title>Campaign&#45;&gt;CampaignActivity</title>
+<title>Campaign->CampaignActivity</title>
 <path fill="none" stroke="black" d="M816.62,-873.34C781.14,-859.25 725.51,-837.15 685.55,-821.29"/>
 <polygon fill="black" stroke="black" points="686.6,-817.93 676.01,-817.5 684.01,-824.44 686.6,-817.93"/>
 <text text-anchor="middle" x="810" y="-840.8" font-family="Times,serif" font-size="14.00">HAS_ACTIVITY</text>
@@ -34,9 +34,9 @@
 <ellipse fill="lightblue" stroke="black" cx="916" cy="-453" rx="55.79" ry="18"/>
 <text text-anchor="middle" x="916" y="-449.3" font-family="Times,serif" font-size="14.00">Customer</text>
 </g>
-<!-- Campaign&#45;&gt;Customer -->
+<!-- Campaign->Customer -->
 <g id="edge2" class="edge">
-<title>Campaign&#45;&gt;Customer</title>
+<title>Campaign->Customer</title>
 <path fill="none" stroke="black" d="M899.03,-877.93C962.12,-864.62 1065,-837.48 1065,-802 1065,-802 1065,-802 1065,-539 1065,-495.71 1016.97,-474.18 975.45,-463.65"/>
 <polygon fill="black" stroke="black" points="976.15,-460.22 965.61,-461.33 974.54,-467.03 976.15,-460.22"/>
 <text text-anchor="middle" x="1147" y="-666.8" font-family="Times,serif" font-size="14.00">TARGETS_CUSTOMER</text>
@@ -47,9 +47,9 @@
 <ellipse fill="lightblue" stroke="black" cx="637" cy="-714" rx="67.69" ry="18"/>
 <text text-anchor="middle" x="637" y="-710.3" font-family="Times,serif" font-size="14.00">Opportunity</text>
 </g>
-<!-- CampaignActivity&#45;&gt;Opportunity -->
+<!-- CampaignActivity->Opportunity -->
 <g id="edge12" class="edge">
-<title>CampaignActivity&#45;&gt;Opportunity</title>
+<title>CampaignActivity->Opportunity</title>
 <path fill="none" stroke="black" d="M637,-782.8C637,-771.16 637,-755.55 637,-742.24"/>
 <polygon fill="black" stroke="black" points="640.5,-742.18 637,-732.18 633.5,-742.18 640.5,-742.18"/>
 <text text-anchor="middle" x="711" y="-753.8" font-family="Times,serif" font-size="14.00">HAS_OPPORTUNITY</text>
@@ -60,9 +60,9 @@
 <ellipse fill="lightblue" stroke="black" cx="967" cy="-366" rx="48.19" ry="18"/>
 <text text-anchor="middle" x="967" y="-362.3" font-family="Times,serif" font-size="14.00">Account</text>
 </g>
-<!-- Customer&#45;&gt;Account -->
+<!-- Customer->Account -->
 <g id="edge3" class="edge">
-<title>Customer&#45;&gt;Account</title>
+<title>Customer->Account</title>
 <path fill="none" stroke="black" d="M926.08,-435.21C933.41,-422.98 943.47,-406.21 951.78,-392.36"/>
 <polygon fill="black" stroke="black" points="954.8,-394.13 956.94,-383.76 948.8,-390.53 954.8,-394.13"/>
 <text text-anchor="middle" x="969" y="-405.8" font-family="Times,serif" font-size="14.00">OWNS</text>
@@ -73,9 +73,9 @@
 <ellipse fill="lightblue" stroke="black" cx="632" cy="-279" rx="61.99" ry="18"/>
 <text text-anchor="middle" x="632" y="-275.3" font-family="Times,serif" font-size="14.00">Interaction</text>
 </g>
-<!-- Customer&#45;&gt;Interaction -->
+<!-- Customer->Interaction -->
 <g id="edge4" class="edge">
-<title>Customer&#45;&gt;Interaction</title>
+<title>Customer->Interaction</title>
 <path fill="none" stroke="black" d="M873.13,-441.25C864.18,-439.1 854.8,-436.92 846,-435 740.73,-412.04 676.14,-468.27 609,-384 591.28,-361.76 603.15,-328.7 615.46,-305.85"/>
 <polygon fill="black" stroke="black" points="618.57,-307.46 620.49,-297.05 612.49,-303.99 618.57,-307.46"/>
 <text text-anchor="middle" x="681" y="-362.3" font-family="Times,serif" font-size="14.00">HAS_INTERACTION</text>
@@ -86,9 +86,9 @@
 <ellipse fill="lightblue" stroke="black" cx="127" cy="-105" rx="62.29" ry="18"/>
 <text text-anchor="middle" x="127" y="-101.3" font-family="Times,serif" font-size="14.00">OpenOrder</text>
 </g>
-<!-- Customer&#45;&gt;OpenOrder -->
+<!-- Customer->OpenOrder -->
 <g id="edge13" class="edge">
-<title>Customer&#45;&gt;OpenOrder</title>
+<title>Customer->OpenOrder</title>
 <path fill="none" stroke="black" d="M877.21,-439.98C869.89,-438.05 862.25,-436.28 855,-435 753.15,-417.03 722.1,-446.57 623,-417 392.17,-348.13 309.17,-335.02 148,-156 142.09,-149.43 137.69,-140.96 134.49,-132.87"/>
 <polygon fill="black" stroke="black" points="137.76,-131.61 131.16,-123.33 131.15,-133.92 137.76,-131.61"/>
 <text text-anchor="middle" x="376.5" y="-275.3" font-family="Times,serif" font-size="14.00">HAS_OPEN_ORDER</text>
@@ -99,16 +99,16 @@
 <ellipse fill="lightblue" stroke="black" cx="1173" cy="-105" rx="57.39" ry="18"/>
 <text text-anchor="middle" x="1173" y="-101.3" font-family="Times,serif" font-size="14.00">RiskScore</text>
 </g>
-<!-- Customer&#45;&gt;RiskScore -->
+<!-- Customer->RiskScore -->
 <g id="edge6" class="edge">
-<title>Customer&#45;&gt;RiskScore</title>
+<title>Customer->RiskScore</title>
 <path fill="none" stroke="black" d="M969.8,-447.74C1092.2,-437.34 1381,-408.39 1381,-367 1381,-367 1381,-367 1381,-191 1381,-129.14 1301.19,-111.3 1240.44,-106.68"/>
 <polygon fill="black" stroke="black" points="1240.32,-103.17 1230.11,-106.01 1239.86,-110.15 1240.32,-103.17"/>
 <text text-anchor="middle" x="1448" y="-275.3" font-family="Times,serif" font-size="14.00">HAS_RISK_SCORE</text>
 </g>
-<!-- Customer&#45;&gt;Opportunity -->
+<!-- Customer->Opportunity -->
 <g id="edge11" class="edge">
-<title>Customer&#45;&gt;Opportunity</title>
+<title>Customer->Opportunity</title>
 <path fill="none" stroke="black" d="M910.5,-471.22C896.05,-513.6 852.77,-623.45 777,-678 757.61,-691.96 733.23,-700.38 710.27,-705.44"/>
 <polygon fill="black" stroke="black" points="709.31,-702.07 700.2,-707.48 710.69,-708.93 709.31,-702.07"/>
 <text text-anchor="middle" x="938" y="-579.8" font-family="Times,serif" font-size="14.00">HAS_OPPORTUNITY</text>
@@ -119,9 +119,9 @@
 <ellipse fill="lightblue" stroke="black" cx="1004" cy="-279" rx="47.39" ry="18"/>
 <text text-anchor="middle" x="1004" y="-275.3" font-family="Times,serif" font-size="14.00">Product</text>
 </g>
-<!-- Account&#45;&gt;Product -->
+<!-- Account->Product -->
 <g id="edge30" class="edge">
-<title>Account&#45;&gt;Product</title>
+<title>Account->Product</title>
 <path fill="none" stroke="black" d="M964.18,-347.65C963.32,-337.69 963.57,-325.19 968,-315 969.94,-310.54 972.74,-306.36 975.94,-302.55"/>
 <polygon fill="black" stroke="black" points="978.52,-304.92 982.92,-295.28 973.47,-300.07 978.52,-304.92"/>
 <text text-anchor="middle" x="1032" y="-318.8" font-family="Times,serif" font-size="14.00">SUBSCRIBED_TO</text>
@@ -132,23 +132,23 @@
 <ellipse fill="lightblue" stroke="black" cx="1118" cy="-279" rx="44.39" ry="18"/>
 <text text-anchor="middle" x="1118" y="-275.3" font-family="Times,serif" font-size="14.00">Invoice</text>
 </g>
-<!-- Account&#45;&gt;Invoice -->
+<!-- Account->Invoice -->
 <g id="edge31" class="edge">
-<title>Account&#45;&gt;Invoice</title>
+<title>Account->Invoice</title>
 <path fill="none" stroke="black" d="M1013.99,-362.12C1040.73,-358.26 1073.31,-349.53 1096,-330 1103.03,-323.95 1107.89,-315.23 1111.23,-306.77"/>
 <polygon fill="black" stroke="black" points="1114.6,-307.71 1114.47,-297.11 1107.97,-305.48 1114.6,-307.71"/>
 <text text-anchor="middle" x="1153" y="-318.8" font-family="Times,serif" font-size="14.00">GENERATES</text>
 </g>
-<!-- Account&#45;&gt;Interaction -->
+<!-- Account->Interaction -->
 <g id="edge5" class="edge">
-<title>Account&#45;&gt;Interaction</title>
+<title>Account->Interaction</title>
 <path fill="none" stroke="black" d="M926.8,-356.02C896.54,-349.16 854.08,-339.33 817,-330 772.32,-318.75 721.85,-305.04 684.92,-294.83"/>
 <polygon fill="black" stroke="black" points="685.45,-291.34 674.88,-292.04 683.58,-298.09 685.45,-291.34"/>
 <text text-anchor="middle" x="889" y="-318.8" font-family="Times,serif" font-size="14.00">HAS_INTERACTION</text>
 </g>
-<!-- Account&#45;&gt;RiskScore -->
+<!-- Account->RiskScore -->
 <g id="edge7" class="edge">
-<title>Account&#45;&gt;RiskScore</title>
+<title>Account->RiskScore</title>
 <path fill="none" stroke="black" d="M1015.23,-364.99C1077.33,-363.84 1180.12,-357.67 1204,-330 1270.91,-252.48 1098.53,-246.21 1096,-243 1066.96,-206.16 1111.66,-157.01 1144.15,-128.7"/>
 <polygon fill="black" stroke="black" points="1146.72,-131.11 1152.09,-121.97 1142.2,-125.77 1146.72,-131.11"/>
 <text text-anchor="middle" x="1163" y="-231.8" font-family="Times,serif" font-size="14.00">HAS_RISK_SCORE</text>
@@ -159,58 +159,58 @@
 <ellipse fill="lightgreen" stroke="black" cx="501" cy="-192" rx="105.08" ry="18"/>
 <text text-anchor="middle" x="501" y="-188.3" font-family="Times,serif" font-size="14.00">AI_Recommendation</text>
 </g>
-<!-- Interaction&#45;&gt;AI_Recommendation -->
+<!-- Interaction->AI_Recommendation -->
 <g id="edge24" class="edge">
-<title>Interaction&#45;&gt;AI_Recommendation</title>
+<title>Interaction->AI_Recommendation</title>
 <path fill="none" stroke="black" d="M576.24,-271C542.27,-265.46 503.44,-256.4 493,-243 487.98,-236.56 487.66,-228.22 489.28,-220.2"/>
 <polygon fill="black" stroke="black" points="492.7,-220.97 492.17,-210.39 485.99,-218.99 492.7,-220.97"/>
 <text text-anchor="middle" x="554" y="-231.8" font-family="Times,serif" font-size="14.00">HAS_FEEDBACK</text>
 </g>
-<!-- RiskScore&#45;&gt;Customer -->
+<!-- RiskScore->Customer -->
 <g id="edge8" class="edge">
-<title>RiskScore&#45;&gt;Customer</title>
+<title>RiskScore->Customer</title>
 <path fill="none" stroke="black" d="M1230,-107.1C1335.6,-110.7 1551,-126.01 1551,-191 1551,-367 1551,-367 1551,-367 1551,-423.97 1144.3,-444.19 981.86,-450"/>
 <polygon fill="black" stroke="black" points="981.39,-446.51 971.52,-450.36 981.63,-453.51 981.39,-446.51"/>
 <text text-anchor="middle" x="1614.5" y="-275.3" font-family="Times,serif" font-size="14.00">FOR_CUSTOMER</text>
 </g>
-<!-- RiskScore&#45;&gt;Account -->
+<!-- RiskScore->Account -->
 <g id="edge9" class="edge">
-<title>RiskScore&#45;&gt;Account</title>
+<title>RiskScore->Account</title>
 <path fill="none" stroke="black" d="M1185.19,-122.71C1213.69,-163.91 1278.13,-271.31 1222,-330 1195.8,-357.4 1092.31,-363.85 1025.5,-365.09"/>
 <polygon fill="black" stroke="black" points="1025.05,-361.6 1015.11,-365.25 1025.16,-368.6 1025.05,-361.6"/>
 <text text-anchor="middle" x="1298" y="-231.8" font-family="Times,serif" font-size="14.00">FOR_ACCOUNT</text>
 </g>
-<!-- RiskScore&#45;&gt;AI_Recommendation -->
+<!-- RiskScore->AI_Recommendation -->
 <g id="edge10" class="edge">
-<title>RiskScore&#45;&gt;AI_Recommendation</title>
+<title>RiskScore->AI_Recommendation</title>
 <path fill="none" stroke="black" d="M1125.68,-115.23C1090.65,-122.13 1041.8,-131.91 999,-141 969.15,-147.34 962.17,-151.42 932,-156 824.01,-172.39 699.56,-181.46 612.24,-186.23"/>
 <polygon fill="black" stroke="black" points="611.84,-182.74 602.04,-186.77 612.22,-189.73 611.84,-182.74"/>
 <text text-anchor="middle" x="1040" y="-144.8" font-family="Times,serif" font-size="14.00">USED_FOR</text>
 </g>
-<!-- AI_Recommendation&#45;&gt;CampaignActivity -->
+<!-- AI_Recommendation->CampaignActivity -->
 <g id="edge15" class="edge">
-<title>AI_Recommendation&#45;&gt;CampaignActivity</title>
+<title>AI_Recommendation->CampaignActivity</title>
 <path fill="none" stroke="black" d="M405.59,-199.67C260.23,-211.12 0,-237.31 0,-278 0,-715 0,-715 0,-715 0,-768.42 356.47,-789.48 536.08,-796.7"/>
 <polygon fill="black" stroke="black" points="535.94,-800.2 546.07,-797.1 536.22,-793.21 535.94,-800.2"/>
 <text text-anchor="middle" x="97" y="-492.8" font-family="Times,serif" font-size="14.00">FOR_CAMPAIGN_ACTIVITY</text>
 </g>
-<!-- AI_Recommendation&#45;&gt;Interaction -->
+<!-- AI_Recommendation->Interaction -->
 <g id="edge18" class="edge">
-<title>AI_Recommendation&#45;&gt;Interaction</title>
+<title>AI_Recommendation->Interaction</title>
 <path fill="none" stroke="black" d="M579.68,-204.11C594.3,-209.33 608.31,-216.94 619,-228 624.87,-234.08 628.18,-242.45 630.02,-250.61"/>
 <polygon fill="black" stroke="black" points="626.59,-251.33 631.65,-260.64 633.5,-250.21 626.59,-251.33"/>
 <text text-anchor="middle" x="700" y="-231.8" font-family="Times,serif" font-size="14.00">FOR_INTERACTION</text>
 </g>
-<!-- AI_Recommendation&#45;&gt;OpenOrder -->
+<!-- AI_Recommendation->OpenOrder -->
 <g id="edge14" class="edge">
-<title>AI_Recommendation&#45;&gt;OpenOrder</title>
+<title>AI_Recommendation->OpenOrder</title>
 <path fill="none" stroke="black" d="M397.9,-188.34C315.78,-184.71 208.45,-176.16 170,-156 159.13,-150.3 149.83,-140.61 142.68,-131.27"/>
 <polygon fill="black" stroke="black" points="145.39,-129.03 136.74,-122.91 139.68,-133.09 145.39,-129.03"/>
 <text text-anchor="middle" x="241.5" y="-144.8" font-family="Times,serif" font-size="14.00">FOR_OPEN_ORDER</text>
 </g>
-<!-- AI_Recommendation&#45;&gt;RiskScore -->
+<!-- AI_Recommendation->RiskScore -->
 <g id="edge16" class="edge">
-<title>AI_Recommendation&#45;&gt;RiskScore</title>
+<title>AI_Recommendation->RiskScore</title>
 <path fill="none" stroke="black" d="M596.24,-184.26C662.17,-178.58 743.5,-169.23 775,-156 784.92,-151.83 784.01,-144.99 794,-141 822.29,-129.69 1006.5,-116.51 1107.31,-110.03"/>
 <polygon fill="black" stroke="black" points="1107.63,-113.51 1117.39,-109.38 1107.19,-106.53 1107.63,-113.51"/>
 <text text-anchor="middle" x="861" y="-144.8" font-family="Times,serif" font-size="14.00">HAS_RISK_SCORE</text>
@@ -221,9 +221,9 @@
 <ellipse fill="lightgreen" stroke="black" cx="506" cy="-105" rx="64.19" ry="18"/>
 <text text-anchor="middle" x="506" y="-101.3" font-family="Times,serif" font-size="14.00">WorkQueue</text>
 </g>
-<!-- AI_Recommendation&#45;&gt;WorkQueue -->
+<!-- AI_Recommendation->WorkQueue -->
 <g id="edge19" class="edge">
-<title>AI_Recommendation&#45;&gt;WorkQueue</title>
+<title>AI_Recommendation->WorkQueue</title>
 <path fill="none" stroke="black" d="M502.01,-173.8C502.7,-162.16 503.61,-146.55 504.4,-133.24"/>
 <polygon fill="black" stroke="black" points="507.9,-133.36 504.99,-123.18 500.91,-132.95 507.9,-133.36"/>
 <text text-anchor="middle" x="573.5" y="-144.8" font-family="Times,serif" font-size="14.00">GENERATES_TASK</text>
@@ -234,9 +234,9 @@
 <ellipse fill="lightgreen" stroke="black" cx="310" cy="-105" rx="53.89" ry="18"/>
 <text text-anchor="middle" x="310" y="-101.3" font-family="Times,serif" font-size="14.00">Coaching</text>
 </g>
-<!-- AI_Recommendation&#45;&gt;Coaching -->
+<!-- AI_Recommendation->Coaching -->
 <g id="edge20" class="edge">
-<title>AI_Recommendation&#45;&gt;Coaching</title>
+<title>AI_Recommendation->Coaching</title>
 <path fill="none" stroke="black" d="M414.32,-181.7C377.73,-176.16 340.48,-167.85 327,-156 320.34,-150.15 316.29,-141.59 313.82,-133.19"/>
 <polygon fill="black" stroke="black" points="317.18,-132.2 311.53,-123.23 310.36,-133.76 317.18,-132.2"/>
 <text text-anchor="middle" x="413.5" y="-144.8" font-family="Times,serif" font-size="14.00">SUGGESTS_COACHING</text>
@@ -247,23 +247,23 @@
 <ellipse fill="lightblue" stroke="black" cx="844" cy="-105" rx="77.19" ry="18"/>
 <text text-anchor="middle" x="844" y="-101.3" font-family="Times,serif" font-size="14.00">SalesManager</text>
 </g>
-<!-- AI_Recommendation&#45;&gt;SalesManager -->
+<!-- AI_Recommendation->SalesManager -->
 <g id="edge21" class="edge">
-<title>AI_Recommendation&#45;&gt;SalesManager</title>
+<title>AI_Recommendation->SalesManager</title>
 <path fill="none" stroke="black" d="M572.63,-178.78C596.53,-173.39 622.94,-165.95 646,-156 657.21,-151.16 657.7,-145.61 669,-141 699.54,-128.53 734.95,-120.38 765.9,-115.11"/>
 <polygon fill="black" stroke="black" points="766.47,-118.56 775.77,-113.5 765.34,-111.65 766.47,-118.56"/>
 <text text-anchor="middle" x="722" y="-144.8" font-family="Times,serif" font-size="14.00">ASSIGNED_TO</text>
 </g>
-<!-- AI_Recommendation&#45;&gt;Opportunity -->
+<!-- AI_Recommendation->Opportunity -->
 <g id="edge17" class="edge">
-<title>AI_Recommendation&#45;&gt;Opportunity</title>
+<title>AI_Recommendation->Opportunity</title>
 <path fill="none" stroke="black" d="M411.8,-201.67C325.93,-212.55 209,-235.23 209,-278 209,-628 209,-628 209,-628 209,-698.55 435.58,-711.44 559.02,-713.22"/>
 <polygon fill="black" stroke="black" points="559.14,-716.72 569.18,-713.35 559.23,-709.72 559.14,-716.72"/>
 <text text-anchor="middle" x="283" y="-449.3" font-family="Times,serif" font-size="14.00">FOR_OPPORTUNITY</text>
 </g>
-<!-- SalesManager&#45;&gt;Customer -->
+<!-- SalesManager->Customer -->
 <g id="edge22" class="edge">
-<title>SalesManager&#45;&gt;Customer</title>
+<title>SalesManager->Customer</title>
 <path fill="none" stroke="black" d="M918.59,-109.87C966.24,-114.08 1021.83,-122.83 1037,-141 1118.83,-239 847.47,-155.21 776,-261 733.05,-324.57 827.11,-396.95 881.25,-431.52"/>
 <polygon fill="black" stroke="black" points="879.56,-434.59 889.89,-436.94 883.28,-428.66 879.56,-434.59"/>
 <text text-anchor="middle" x="862" y="-275.3" font-family="Times,serif" font-size="14.00">MANAGES_CUSTOMER</text>
@@ -274,9 +274,9 @@
 <ellipse fill="lightgreen" stroke="black" cx="844" cy="-18" rx="54.69" ry="18"/>
 <text text-anchor="middle" x="844" y="-14.3" font-family="Times,serif" font-size="14.00">Feedback</text>
 </g>
-<!-- SalesManager&#45;&gt;Feedback -->
+<!-- SalesManager->Feedback -->
 <g id="edge23" class="edge">
-<title>SalesManager&#45;&gt;Feedback</title>
+<title>SalesManager->Feedback</title>
 <path fill="none" stroke="black" d="M844,-86.8C844,-75.16 844,-59.55 844,-46.24"/>
 <polygon fill="black" stroke="black" points="847.5,-46.18 844,-36.18 840.5,-46.18 847.5,-46.18"/>
 <text text-anchor="middle" x="910" y="-57.8" font-family="Times,serif" font-size="14.00">GAVE_FEEDBACK</text>
@@ -287,9 +287,9 @@
 <ellipse fill="lightgreen" stroke="black" cx="637" cy="-627" rx="81.79" ry="18"/>
 <text text-anchor="middle" x="637" y="-623.3" font-family="Times,serif" font-size="14.00">DealSimulation</text>
 </g>
-<!-- Opportunity&#45;&gt;DealSimulation -->
+<!-- Opportunity->DealSimulation -->
 <g id="edge25" class="edge">
-<title>Opportunity&#45;&gt;DealSimulation</title>
+<title>Opportunity->DealSimulation</title>
 <path fill="none" stroke="black" d="M637,-695.8C637,-684.16 637,-668.55 637,-655.24"/>
 <polygon fill="black" stroke="black" points="640.5,-655.18 637,-645.18 633.5,-655.18 640.5,-655.18"/>
 <text text-anchor="middle" x="705" y="-666.8" font-family="Times,serif" font-size="14.00">HAS_SIMULATION</text>
@@ -300,23 +300,23 @@
 <ellipse fill="lightgreen" stroke="black" cx="637" cy="-540" rx="51.19" ry="18"/>
 <text text-anchor="middle" x="637" y="-536.3" font-family="Times,serif" font-size="14.00">Proposal</text>
 </g>
-<!-- DealSimulation&#45;&gt;Proposal -->
+<!-- DealSimulation->Proposal -->
 <g id="edge26" class="edge">
-<title>DealSimulation&#45;&gt;Proposal</title>
+<title>DealSimulation->Proposal</title>
 <path fill="none" stroke="black" d="M637,-608.8C637,-597.16 637,-581.55 637,-568.24"/>
 <polygon fill="black" stroke="black" points="640.5,-568.18 637,-558.18 633.5,-568.18 640.5,-568.18"/>
 <text text-anchor="middle" x="716" y="-579.8" font-family="Times,serif" font-size="14.00">CREATES_PROPOSAL</text>
 </g>
-<!-- Proposal&#45;&gt;Customer -->
+<!-- Proposal->Customer -->
 <g id="edge27" class="edge">
-<title>Proposal&#45;&gt;Customer</title>
+<title>Proposal->Customer</title>
 <path fill="none" stroke="black" d="M643.84,-522.14C649.39,-510.78 658.38,-496.53 671,-489 704.57,-468.97 807.47,-477.63 846,-471 851.92,-469.98 858.09,-468.75 864.19,-467.41"/>
 <polygon fill="black" stroke="black" points="865.39,-470.73 874.37,-465.09 863.84,-463.9 865.39,-470.73"/>
 <text text-anchor="middle" x="779.5" y="-492.8" font-family="Times,serif" font-size="14.00">PROPOSED_FOR_CUSTOMER</text>
 </g>
-<!-- Proposal&#45;&gt;Account -->
+<!-- Proposal->Account -->
 <g id="edge28" class="edge">
-<title>Proposal&#45;&gt;Account</title>
+<title>Proposal->Account</title>
 <path fill="none" stroke="black" d="M632.9,-521.88C628.54,-499.09 624.87,-458.89 646,-435 680.28,-396.24 827.57,-378.25 910.2,-371.07"/>
 <polygon fill="black" stroke="black" points="910.52,-374.55 920.19,-370.22 909.93,-367.58 910.52,-374.55"/>
 <text text-anchor="middle" x="748.5" y="-449.3" font-family="Times,serif" font-size="14.00">PROPOSED_FOR_ACCOUNT</text>
@@ -327,9 +327,9 @@
 <ellipse fill="lightblue" stroke="black" cx="426" cy="-453" rx="51.19" ry="18"/>
 <text text-anchor="middle" x="426" y="-449.3" font-family="Times,serif" font-size="14.00">Contract</text>
 </g>
-<!-- Proposal&#45;&gt;Contract -->
+<!-- Proposal->Contract -->
 <g id="edge29" class="edge">
-<title>Proposal&#45;&gt;Contract</title>
+<title>Proposal->Contract</title>
 <path fill="none" stroke="black" d="M585.82,-537.72C530.4,-535.13 447.18,-527.35 427,-504 421.65,-497.81 420.1,-489.41 420.28,-481.25"/>
 <polygon fill="black" stroke="black" points="423.77,-481.54 421.28,-471.25 416.81,-480.85 423.77,-481.54"/>
 <text text-anchor="middle" x="525" y="-492.8" font-family="Times,serif" font-size="14.00">RESULTED_IN_CONTRACT</text>
